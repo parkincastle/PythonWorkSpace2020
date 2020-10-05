@@ -27,21 +27,61 @@
 #         print(f'{i} X {j} = {i*j}')
 #     print(" ")
 
-# <연습문제> 사용자가 희망하는 단을 숫자로 받아서 
-dan = int(input('원하는 단을 입력하세요!'))
-for i in range(2, dan) :
-    for j in range(1, 10):
-        print(f'{i} X {j} = {i*j}')
+# <연습문제1> 사용자가 희망하는 단을 숫자로 받아서 
+# dan = int(input('원하는 단을 입력하세요!'))
+# for i in range(2, dan) :
+#     for j in range(1, 10):
+#         print(f'{i} X {j} = {i*j}')
+
+# 2-4 for문과 시퀸스 자료형
+# a = [(1, 2), (3, 4), (5, 6)]
+# for i in a:
+#     for j in i: # i => (1,2)
+#         print(j)
+
+# # 딕셔너리
+# students = [{'홍길동' :100}, {'가제트' : 200}, {'가가멜' : 300}]
+# for dic in students:
+#     #print(dic)
+#     # print(dic.items())
+#     # print(list(dic.items()))
+#     # print(list(dic.items())[0])
+#     data = list(dic.items())[0] # ('홍길동', 100)
+#     key = data[0]   # '홍길동'
+#     value = data[1] # 100
+#     print(f'key: {key}, value : {value}')
+
+# # index 값을 같이 사용하고 싶을 때
+# for index, dic in enumerate(students):
+#     data = list(dic.items())[0] # ('홍길동', 100)
+#     key = data[0]   # '홍길동'
+#     value = data[1] # 100
+#     print(f'{index}.key: {key}, value : {value}')
+
 
 
 
 
 #endregion
 
+#reginon break, continue문
+
+langs = ['한국어', 'English']
+
+for i, s in enumerate(langs, start = 1):
+    print(f'{i}, {s}') 
 
 
+while True:
+    inputNum = input('언어의 번호를 선택하세요')
 
+    if not inputNum.isnumeric():
+        continue
+    inputNum = int(inputNum)
+    if 0<inputNum<3:
+        break
 
+print(f'사용자가 선택한 언어는 {langs[inputNum-1]} 입니다.')
 
 
 
