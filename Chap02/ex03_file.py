@@ -23,12 +23,30 @@
 # f.close()
 
 # 5.파일 여러 줄 읽기
-f = open('새파일.txt', 'r', encoding = 'utf-8')
-while True:
-    line = f.readline()
-    if not line:
-        break
-    print(line, end = ' ')
-f.close()
+#f = open('새파일.txt', 'r', encoding = 'utf-8')
+# while True:
+#     line = f.readline()
+#     if not line:
+#         break
+#     print(line, end = ' ')
+# f.close()
+
+# for line in f.readlines():
+#     print(line, end = ' ')
+# f.close()
+
+# # 6.파일 전체 내용 읽기
+# f = open('새파일.txt', 'r', encoding = 'utf-8')
+# print(f.read()) # 파일 전체 내용을 하나의 문자열로 반환한다.
+# f.close()
+
+# 7. with문의 사용 (자동으로 파일닫기)
+with open('새파일.txt', 'r', encoding = 'utf-8') as f:
+    print(f.read())
+
+
+
+
+
 
 
