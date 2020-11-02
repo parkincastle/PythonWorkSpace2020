@@ -127,8 +127,8 @@ def calc(operator, func, a, b):
 
 calc('덧셈', add, 5, 10)
 calc('뺄셈', subtract, 5, 10)
-calc('곱셈', lambda a, b, 5, 10)
-calc('나눗셈', lambda a, b, 5, 10)
+# calc('곱셈', lambda a, b, 5, 10)
+# calc('나눗셈', lambda a, b, 5, 10)
 
 #endregion
 
